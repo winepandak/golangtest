@@ -1,39 +1,29 @@
-#!/usr/bin/env bash
+::#""!/usr/bin/env bash
 
-#ssh_host=$1
+::ssh_host=$1
 echo "ssh_host=$1"
 
-#ssh_host="root@47.75.54.93"        #hk
-#ssh_host="root@47.111.169.42"      #hz
-#ssh_host="root@149.129.175.159"    #india
+::ssh -p22 root@47.56.130.152
 
-#ssh_host="root@47.56.130.152"    #hk test
-#ssh -p22 root@47.56.130.152
+set ssh_host = "-p 22 root@47.56.130.152"
 
-set %ssh_host = "-p22 root@47.56.130.152"
-
-ssh %ssh_host 'rm -rf /opt/temp'
-ssh %ssh_host 'mkdir /opt/testproject'
-ssh %ssh_host 'mkdir /opt/temp'
+ssh ssh_host 'rm -rf /opt/temp'
+ssh ssh_host 'mkdir /opt/testproject'
+ssh ssh_host 'mkdir /opt/temp'
 
 
 
-ssh %ssh_host 'git clone https://187225207@qq.com:Edifieal1716@github.com/winepandak/golangtest.git /opt/testproject'
-#ssh $ssh_host 'git clone https://187225207@qq.com:Edifieal1716@github.com/winepandak/golangtest.git /opt/temp/common'
+::ssh ssh_host 'git clone https://187225207@qq.com:Edifieal1716@github.com/winepandak/golangtest.git /opt/testproject'
+::ssh ssh_host 'git clone https://github.com/winepandak/golangtest.git /opt/testproject'
 
-ssh %ssh_host '\cp -rf /opt/temp/nua/start.sh /opt/testproject/'
-ssh %ssh_host '\cp -rf /opt/temp/nua/stop.sh /opt/testproject/'
-ssh %ssh_host '\cp -rf /opt/temp/nua/grace_restart.sh /opt/testproject/'
 
-#if ssh $ssh_host test -e /opt/testproject/nua.json;
-#then
-#    echo "File exists '/opt/testproject/nua.json'"
-#else
-#    ssh $ssh_host '\cp -rf /opt/testproject/nua.json /opt/testproject/'
-#fi
+::ssh %ssh_host '\cp -rf /opt/testproject/start.sh /opt/testproject/'
+::ssh %ssh_host '\cp -rf /opt/testproject/stop.sh /opt/testproject/'
+::ssh %ssh_host '\cp -rf/opt/testproject/grace_restart.sh /opt/testproject/'
 
-ssh %ssh_host 'chmod +x /opt/testproject/*.sh'
 
-ssh %ssh_host '/opt/testproject/nua_git.sh'
+::ssh %ssh_host 'chmod +x /opt/testproject/*.sh'
 
-ssh %ssh_host '/opt/testproject/grace_restart.sh'
+::ssh %ssh_host '/opt/testproject/nua_git.sh'
+
+::ssh %ssh_host '/opt/testproject/grace_restart.sh'
