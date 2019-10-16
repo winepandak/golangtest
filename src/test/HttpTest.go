@@ -10,7 +10,7 @@ import (
 func testHttpHost() {
 	pathExp := "/newmessage"
 	prefix := "/api"
-	addr := ":8080"
+	addr := ":445"
 
 	fmt.Println("http://localhost" + addr + prefix + pathExp)
 	api := rest.NewApi()
