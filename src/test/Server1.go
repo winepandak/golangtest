@@ -30,6 +30,6 @@ var i = 0
 func sayOne(w http.ResponseWriter, r *http.Request) {
 	i++
 	fmt.Println("req times : ", i)
-	io.WriteString(w, "this is version "+strconv.Itoa(i))
+	io.WriteString(w, "刷新即可锤兔狲 锤第 "+strconv.Itoa(i)+"下")
 
 }
