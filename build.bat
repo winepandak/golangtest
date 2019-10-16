@@ -7,7 +7,8 @@ echo "ssh_host=$1"
 #ssh_host="root@47.111.169.42"      #hz
 #ssh_host="root@149.129.175.159"    #india
 
-ssh_host="root@47.56.130.152"    #hk test
+#ssh_host="root@47.56.130.152"    #hk test
+ssh -p22 root@47.56.130.152
 
 ssh $ssh_host 'rm -rf /opt/temp'
 ssh $ssh_host 'mkdir /opt/testproject'
