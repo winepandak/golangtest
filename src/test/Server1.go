@@ -1,9 +1,11 @@
 package main
 
 import (
+	"fmt"
 	"io"
 	"log"
 	"net/http"
+	"strconv"
 )
 
 func testhttp2() {
@@ -13,7 +15,7 @@ func testhttp2() {
 
 	// 路由注册完，开始运行
 
-	err := http.ListenAndServe(":445", nil)
+	err := http.ListenAndServe(":446", nil)
 
 	if err != nil {
 
@@ -23,8 +25,11 @@ func testhttp2() {
 
 }
 
-func sayOne(w http.ResponseWriter, r *http.Request) {
+var i = 0
 
-	io.WriteString(w, "this is version 1")
+func sayOne(w http.ResponseWriter, r *http.Request) {
+	i++
+	fmt.Println("req times : ", i)
+	io.WriteString(w, "this is version "+strconv.Itoa(i))
 
 }
