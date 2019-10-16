@@ -26,3 +26,4 @@ ssh ssh_host 'mkdir /opt/temp'
 ::ssh %ssh_host '/opt/testproject/nua_git.sh'
 
 ::ssh %ssh_host '/opt/testproject/grace_restart.sh'
+
