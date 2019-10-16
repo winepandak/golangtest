@@ -12,7 +12,8 @@ func main() {
 	s, _ := testUtils()
 	fmt.Println(s)
 
-	testHttpHost()
+	//testHttpHost()
+	testhttp2()
 }
 func getTextNUm() (int, int) {
 	return 100, 200
