@@ -13,7 +13,6 @@ ssh ssh_host 'mkdir /opt/temp'
 
 
 
-::ssh ssh_host 'git clone https://187225207@qq.com:Edifieal1716@github.com/winepandak/golangtest.git /opt/testproject'
 ::ssh ssh_host 'git clone https://github.com/winepandak/golangtest.git /opt/testproject'
 
 
