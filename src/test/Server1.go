@@ -13,7 +13,7 @@ func testhttp2() {
 
 	// 路由注册完，开始运行
 
-	err := http.ListenAndServe(":6055", nil)
+	err := http.ListenAndServe(":445", nil)
 
 	if err != nil {
 
