@@ -22,12 +22,12 @@ ssh $ssh_host '\cp -rf /opt/temp/nua/start.sh /opt/testproject/'
 ssh $ssh_host '\cp -rf /opt/temp/nua/stop.sh /opt/testproject/'
 ssh $ssh_host '\cp -rf /opt/temp/nua/grace_restart.sh /opt/testproject/'
 
-if ssh $ssh_host test -e /opt/testproject/nua.json;
-then
-    echo "File exists '/opt/testproject/nua.json'"
-else
-    ssh $ssh_host '\cp -rf /opt/temp/nua/nua.json /opt/nua/'
-fi
+#if ssh $ssh_host test -e /opt/testproject/nua.json;
+#then
+#    echo "File exists '/opt/testproject/nua.json'"
+#else
+#    ssh $ssh_host '\cp -rf /opt/testproject/nua.json /opt/testproject/'
+#fi
 
 ssh $ssh_host 'chmod +x /opt/testproject/*.sh'
 
